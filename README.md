@@ -1,6 +1,8 @@
 open2internet Node.js client
 =============================
 
+![npm version](https://img.shields.io/npm/v/open2internet)
+
 Node.js npm to expose local Node.js app to internet by https://microservices.club/
 
 # How to use?
