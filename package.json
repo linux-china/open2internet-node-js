@@ -1,0 +1,25 @@
+{
+  "name": "open2internet",
+  "version": "0.1.0",
+  "description": "Expose local http service to internet",
+  "repository": "https://github.com/linux-china/open2internet-node-js",
+  "main": "src/index.js",
+  "keywords": [
+    "open2internet",
+    "ngrok"
+  ],
+  "author": "linux_china <libing.chen@gmail.com>",
+  "license": "ISC",
+  "bin": {
+    "open2internet": "bin/open2internet.js"
+  },
+  "dependencies": {
+    "commander": "^8.2.0",
+    "node-fetch": "^3.0.0",
+    "rsocket-core": "0.0.27",
+    "rsocket-flowable": "0.0.27",
+    "rsocket-tcp-client": "0.0.27",
+    "rsocket-types": "0.0.27",
+    "rxjs": "^7.3.0"
+  }
+}
