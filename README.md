@@ -21,7 +21,7 @@ const open2internet = require("open2internet");
 
 # CLI
 
-`open2internet 3000`
+Use `open2internet 3000` on terminal.
 
 # References
 
