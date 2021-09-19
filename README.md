@@ -11,6 +11,9 @@ Node.js npm to expose local Node.js app to internet by https://microservices.clu
 ```javascript
 const open2internet = require("open2internet");
 
+// your local web server 
+// ... 
+
 // exposed to internet by open2internet
 (function () {
     open2internet("http://localhost:3000").then(rsocket => {
