@@ -5,9 +5,9 @@ const RSocketTcpClient = require('rsocket-tcp-client').default;
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 /** @typedef {Object} ConnectionOption
- * @property {String} token
- * @property {String} domain
- * @property {string} url
+ * @property {String} [token]
+ * @property {String} [domain]
+ * @property {string} [url]
  */
 
 /** @typedef {Object} InternetInfo
@@ -17,16 +17,16 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
  */
 
 /** @typedef {Object} HttpRequest
- * @property {Array=} body
+ * @property {Array} [body]
  * @property {Object} headers
  * @property {string} method
  * @property {string} path
- * @property {string=} query
+ * @property {string} [query]
  * @property {String} requestUri
  */
 
 /** @typedef {Object} HttpResponse
- * @property {Array=} body
+ * @property {Array} [body]
  * @property {Object} headers
  * @property {number} status
  */
@@ -110,7 +110,7 @@ class SymmetricResponder {
  * connect to RSocket Server
  * @param url {URL} websocket URL
  * @param responder {object} websocket URL
- * @param options {ConnectionOption=}
+ * @param [options] {ConnectionOption}
  * @return {Single<ReactiveSocket>}
  */
 function connectRSocketServer(url, responder, options) {
@@ -159,8 +159,8 @@ function convertToBuffer(data) {
 
 /**
  *
- * @param localUrl {string} local http server url
- * @param options {ConnectionOption=} connection options
+ * @param {string} localUrl  local http server url
+ * @param [options] {ConnectionOption} connection options
  * @return {Promise<ReactiveSocket>}
  */
 function open2internet(localUrl, options) {
