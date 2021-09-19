@@ -1,7 +1,7 @@
 open2internet Node.js client
 =============================
 
-Node.js npm for https://microservices.club/
+Node.js npm to expose local Node.js app to internet by https://microservices.club/
 
 # How to use?
 
